@@ -1,1 +1,463 @@
+#include <iostream>
+
+using namespace std;
+
+class servivo{
+public:
+    virtual void respiro()= 0;
+    virtual void mealimento()= 0;
+    virtual void habito()=0;
+    virtual void mereproduzco()=0;
+    virtual void medesplazo()=0;
+   
+};
+
+class ave: public servivo{
+protected:
+    string alimento;
+    string respira;
+    string luqhabita;
+    string reproducir;
+    string desplazarce;
+
+public:
+    ave();
+    ave(string ali, string res, string ae, string repro, string despla);
+
+};
+
+ave::ave(){
+
+}
+
+ave::ave(string ali, string res, string lugar, string repro, string despla){
+
+    alimento = ali;
+    respira = res;
+    luqhabita = lugar;
+    reproducir = repro;
+    desplazarce = despla;
+
+}
+
+
+class mamifero: public servivo{
+protected:
+    string alimento;
+    string respira;
+    string luqhabita;
+    string reproducir;
+    string desplazarce;
+
+public:
+    mamifero();
+    mamifero(string ali, string res, string ae, string repro, string despla);
+
+};
+
+mamifero::mamifero(){
+
+}
+
+mamifero::mamifero(string ali, string res, string lugar, string repro, string despla){
+
+    alimento = ali;
+    respira = res;
+    luqhabita = lugar;
+    reproducir = repro;
+    desplazarce = despla;
+
+}
+    
+class reptil: public servivo{
+protected:
+    string alimento;
+    string respira;
+    string luqhabita;
+    string reproducir;
+    string desplazarce;
+
+public:
+    reptil();
+    reptil(string ali, string res, string ae, string repro, string despla);
+    
+};
+
+reptil::reptil(){
+
+}
+
+reptil::reptil(string ali, string res, string lugar, string repro, string despla){
+
+    alimento = ali;
+    respira = res;
+    luqhabita = lugar;
+    reproducir = repro;
+    desplazarce = despla;
+}
+
+class anfibio: public servivo{
+protected:
+    string alimento;
+    string respira;
+    string luqhabita;
+    string reproducir;
+    string desplazarce;
+
+public:
+    anfibio();
+    anfibio(string ali, string res, string ae, string repro, string despla);
+    
+};
+
+anfibio::anfibio(){
+
+}
+
+anfibio::anfibio(string ali, string res, string lugar, string repro, string despla){
+
+    alimento = ali;
+    respira = res;
+    luqhabita = lugar;
+    reproducir = repro;
+    desplazarce = despla;
+}
+class pez: public servivo{
+protected:
+    string alimento;
+    string respira;
+    string luqhabita;
+    string reproducir;
+    string desplazarce;
+
+public:
+    pez();
+    pez(string ali, string res, string ae, string repro, string despla);
+    
+};
+pez::pez(){
+
+}
+
+
+pez::pez(string ali, string res, string lugar, string repro, string despla){
+
+    alimento = ali;
+    respira = res;
+    luqhabita = lugar;
+    reproducir = repro;
+    desplazarce = despla;
+}
+class insecto: public servivo{
+protected:
+    string alimento;
+    string respira;
+    string luqhabita;
+    string reproducir;
+    string desplazarce;
+public:
+    insecto();
+   insecto(string ali, string res, string ae, string repro, string despla);
+    
+};
+
+insecto::insecto(){
+
+}
+insecto::insecto(string ali, string res, string lugar, string repro, string despla){
+
+    alimento = ali;
+    respira = res;
+    luqhabita = lugar;
+    reproducir = repro;
+    desplazarce = despla;
+}
+//CLASES HEREDADAS DE OTRAS CLASES
+class carpintero: public ave{
+
+private:
+    string color;
+    string nombre;
+
+    //string
+
+public:
+    carpintero(string ali, string res, string lugar, string repro, string despla){
+        alimento = ali;
+        respira = res;
+        luqhabita = lugar;
+        reproducir = repro;
+        desplazarce = despla;
+
+    }
+    void habito(){
+        cout<< "Los pajaros carpinteros habitan "<<luqhabita<<endl;
+    }
+
+    void mealimento(){
+        cout<< "Los pajaros carpinteros se alimentan de"<<alimento<<endl;
+    }
+    void respiro(){
+        cout<< "Los pajaros carpinteros"<<respira<<endl;
+    }
+    void mereproduzco(){
+        cout<< "Los pajaros carpinteros se reproducen"<<reproducir<<endl;
+    }
+    void medesplazo(){
+        cout<< "Los pajaros carpinteros se desplazan"<<desplazarce<<endl;
+    }
+
+
+
+};
+
+class leon: public mamifero{
+
+private:
+    string color;
+    string nombre;
+
+    //string
+
+public:
+    leon(string ali, string res, string lugar, string repro, string despla){
+        alimento = ali;
+        respira = res;
+        luqhabita = lugar;
+        reproducir = repro;
+        desplazarce = despla;
+
+    }
+    void habito(){
+        cout<< "Los leones habitan "<<luqhabita<<endl;
+    }
+
+    void mealimento(){
+        cout<< "Los leones  se alimentan de "<<alimento<<endl;
+    }
+    void respiro(){
+        cout<< "Los leones "<<respira<<endl;
+    }
+    void mereproduzco(){
+        cout<< "Los leones se reproducen de forma "<<reproducir<<endl;
+    }
+    void medesplazo(){
+        cout<< "Los leones se desplazan "<<desplazarce<<endl;
+    }
+
+
+
+};
+class serpiente: public reptil{
+
+private:
+    string color;
+    string nombre;
+
+    //string
+
+public:
+    serpiente(string ali, string res, string lugar, string repro, string despla){
+        alimento = ali;
+        respira = res;
+        luqhabita = lugar;
+        reproducir = repro;
+        desplazarce = despla;
+
+    }
+    void habito(){
+        cout<< "Las serpientes habitan "<<luqhabita<<endl;
+    }
+
+    void mealimento(){
+        cout<< "Las serpientes  se alimentan de "<<alimento<<endl;
+    }
+    void respiro(){
+        cout<< "Las serpientes "<<respira<<endl;
+    }
+    void mereproduzco(){
+        cout<< "Las serpientes se reproducen  "<<reproducir<<endl;
+    }
+    void medesplazo(){
+        cout<< "Las serpientes se desplazan "<<desplazarce<<endl;
+    }
+
+
+
+};
+
+class sapo: public anfibio{
+
+private:
+    string color;
+    string nombre;
+
+    //string
+
+public:
+    sapo(string ali, string res, string lugar, string repro, string despla){
+        alimento = ali;
+        respira = res;
+        luqhabita = lugar;
+        reproducir = repro;
+        desplazarce = despla;
+
+    }
+    void habito(){
+        cout<< "Los sapos habitan "<<luqhabita<<endl;
+    }
+
+    void mealimento(){
+        cout<< "Los sapos  se alimentan de "<<alimento<<endl;
+    }
+    void respiro(){
+        cout<< "Los sapos "<<respira<<endl;
+    }
+    void mereproduzco(){
+        cout<< "Los sapos se reproducen  "<<reproducir<<endl;
+    }
+    void medesplazo(){
+        cout<< "Los sapos se desplazan "<<desplazarce<<endl;
+    }
+
+
+
+};
+
+class pirania: public pez{
+
+private:
+    string color;
+    string nombre;
+
+    //string
+
+public:
+    pirania(string ali, string res, string lugar, string repro, string despla){
+        alimento = ali;
+        respira = res;
+        luqhabita = lugar;
+        reproducir = repro;
+        desplazarce = despla;
+
+    }
+    void habito(){
+        cout<< "Las piranias habitan "<<luqhabita<<endl;
+    }
+
+    void mealimento(){
+        cout<< "las piranias  se alimentan de "<<alimento<<endl;
+    }
+    void respiro(){
+        cout<< "las piranias "<<respira<<endl;
+    }
+    void mereproduzco(){
+        cout<< "Las piranias se reproducen  "<<reproducir<<endl;
+    }
+    void medesplazo(){
+        cout<< "Las piranias se desplazan "<<desplazarce<<endl;
+    }
+
+
+
+};
+class abeja: public pez{
+
+private:
+    string color;
+    string nombre;
+
+    //string
+
+public:
+    abeja(string ali, string res, string lugar, string repro, string despla){
+        alimento = ali;
+        respira = res;
+        luqhabita = lugar;
+        reproducir = repro;
+        desplazarce = despla;
+
+    }
+    void habito(){
+        cout<< "Las abejas habitan "<<luqhabita<<endl;
+    }
+
+    void mealimento(){
+        cout<< "las abejas  se alimentan de "<<alimento<<endl;
+    }
+    void respiro(){
+        cout<< "las abejas "<<respira<<endl;
+    }
+    void mereproduzco(){
+        cout<< "Las abejas se reproducen  "<<reproducir<<endl;
+    }
+    void medesplazo(){
+        cout<< "Las abejas se desplazan "<<desplazarce<<endl;
+    }
+
+
+
+};
+
+void imprimirdatosServivo(servivo& objeto){
+    objeto.habito();
+    objeto.mealimento();
+    objeto.respiro();
+    objeto.mereproduzco();
+    objeto.medesplazo();
+
+}
+
+
+
+
+int main()
+{
+    cout<<"----------------CARPINTERO-------------------"<<endl;
+    carpintero a("guzanos"," son animales terrestres","zonas boscosas con formaciones de arboles grandes y medianos","Mediante huevos","volando");
+    a.habito();
+    a.mealimento();
+    a.respiro();
+    a.mereproduzco();
+    a.medesplazo();
+
+    cout<<"--------------------LEONES-------------------------"<<endl;
+    leon b("Carne","son animales terrestres"," en la sabana africana", "vivipara","con sus 4 patas");
+    b.habito();
+    b.mealimento();
+    b.respiro();
+    b.mereproduzco();
+    b.medesplazo();
+    cout<<"--------------------SERPIENTE-------------------------"<<endl;
+    serpiente c("huevos de otras especies","son animales terrestres"," en todo el mundo menos en los polos", "mediante los huevos","arrastrandose");
+    c.habito();
+    c.mealimento();
+    c.respiro();
+    c.mereproduzco();
+    c.medesplazo();
+    cout<<"--------------------SAPOS-------------------------"<<endl;
+    sapo d("insectos","son animales tanto terrestres como acuativos"," en los bosques humedos", "mediante los huevos","saltando");
+    d.habito();
+    d.mealimento();
+    d.respiro();
+    d.mereproduzco();
+    d.medesplazo();
+    cout<<"--------------------PIRANIAS-------------------------"<<endl;
+    pirania e("peces, crustaceos, invertebrados e insectos","son animales  acuativos","viven en los rios de Amarica de sur", "mediante los huevos","Nadando");
+    e.habito();
+    e.mealimento();
+    e.respiro();
+    e.mereproduzco();
+    e.medesplazo();
+    cout<<"--------------------ABEJAS-------------------------"<<endl;
+    abeja f("Polen y miel","son animales  terrestres","en panales", "mediante los huevos","Volando");
+    f.habito();
+    f.mealimento();
+    f.respiro();
+    f.mereproduzco();
+    f.medesplazo();
+
+
+    return 0;
+}
 
